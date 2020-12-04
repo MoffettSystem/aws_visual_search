@@ -7,7 +7,7 @@ sudo fpga-load-local-image  -S0 -I $AGFI
 ACCESS_KEY_PATH=/opt/xilinx/cred.json
 sudo rmmod xocl
 sudo rmmod xdma
-sudo insmod aws_visual_search/utilities/xdma.ko
+sudo insmod /home/centos/aws_visual_search/utilities/xdma.ko
 sudo chmod a+rw /dev/xdma0_user
 sudo chmod a+rw /dev/xdma0_h2c_0
 sudo chmod a+rw /dev/xdma0_c2h_0
