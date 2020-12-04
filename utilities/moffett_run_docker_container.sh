@@ -1,6 +1,7 @@
 #!/bin/bash
 TAG=hubxilinx/moffettai_sp_vs_accelerator:first_release 
 AGFI=agfi-00df190238adaf3bc
+set -e
 sudo fpga-clear-local-image  -S 0
 sudo fpga-load-local-image  -S0 -I $AGFI
 ACCESS_KEY_PATH=/opt/xilinx/cred.json
