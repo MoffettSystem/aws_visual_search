@@ -9,8 +9,19 @@ ACCESS_KEY_PATH=/opt/xilinx/cred.json
 
 # Install xdma driver
 
-sudo rmmod xocl
-sudo rmmod xdma
+
+if lsmod | grep -q 'xocl'; 
+then 
+    echo "Remove previously-installed xocl module"
+    sudo rmmod xocl
+fi
+
+if lsmod | grep 'xdma';
+then 
+    echo "Remove previously-installed xdma module"
+    sudo rmmod xdma
+fi
+
 sudo insmod /home/centos/aws_visual_search/utilities/xdma.ko
 sudo chmod a+rw /dev/xdma0_user
 sudo chmod a+rw /dev/xdma0_h2c_0
