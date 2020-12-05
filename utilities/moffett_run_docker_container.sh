@@ -8,15 +8,13 @@ sudo fpga-load-local-image  -S0 -I $AGFI
 ACCESS_KEY_PATH=/opt/xilinx/cred.json
 
 # Install xdma driver
-
-
 if lsmod | grep -q 'xocl'; 
 then 
     echo "Remove previously-installed xocl module"
     sudo rmmod xocl
 fi
 
-if lsmod | grep 'xdma';
+if lsmod | grep -q 'xdma';
 then 
     echo "Remove previously-installed xdma module"
     sudo rmmod xdma
