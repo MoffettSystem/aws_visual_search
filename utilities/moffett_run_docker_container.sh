@@ -1,7 +1,6 @@
 #!/bin/bash
 TAG=hubxilinx/moffettai_sp_vs_accelerator:first_release 
 AGFI=agfi-00df190238adaf3bc
-set -e
 
 # Load FPGA image
 sudo fpga-clear-local-image  -S 0
