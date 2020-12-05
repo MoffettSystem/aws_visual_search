@@ -2,10 +2,6 @@
 TAG=hubxilinx/moffettai_sp_vs_accelerator:first_release 
 AGFI=agfi-00df190238adaf3bc
 set -e
-# Install aws-fpga sdk
-AWS_FPGA_REPO_DIR=/home/centos/aws-fpga
-git clone https://github.com/aws/aws-fpga.git $AWS_FPGA_REPO_DIR
-source $AWS_FPGA_REPO_DIR/sdk_setup.sh
 
 # Load FPGA image
 sudo fpga-clear-local-image  -S 0
